@@ -1,12 +1,11 @@
 <?php
 
-class QApplicationTests extends QUnitTestCaseBase {  
+class QApplicationTests extends QUnitTestCaseBase {
+    /* Test to make sure QApplication::DisplayAlert is working */
     public function testQApplicationAlert(){
         QApplication::DisplayAlert("working");
-        
-        $arrLength = count(QApplication::$AlertMessageArray);
-        
-        assertEqual(QApplication::$AlertMessageArray[$arrLength], "working", "Alert added to array of alerts");
+        $lastMessage = count(QApplication::$AlertMessageArray) - 1;
+        assertEqual(QApplication::$AlertMessageArray[$lastMessage], "working", "Alert added to array of alerts");
     }
 }
 
