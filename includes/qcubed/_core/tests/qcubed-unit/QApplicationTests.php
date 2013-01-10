@@ -5,7 +5,7 @@ class QApplicationTests extends QUnitTestCaseBase {
     public function testQApplicationAlert(){
         QApplication::DisplayAlert("working");
         $lastMessage = count(QApplication::$AlertMessageArray) - 1;
-        assertEqual(QApplication::$AlertMessageArray[$lastMessage], "working", "Alert added to array of alerts");
+        $this->assertEqual(QApplication::$AlertMessageArray[$lastMessage], "working", "Alert added to array of alerts");
     }
 }
 
