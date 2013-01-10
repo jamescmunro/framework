@@ -758,7 +758,7 @@
 		 * Can be used inside event handlers to do something after verification  on server side.
 		 * @static
 		 * @param string $strJavaScript the javascript to execute
-		 * @param int $intPriority
+		 * @param int $intPriority set to 1 for High priority or 2 for low priority
 		 */
 		public static function ExecuteJavaScript($strJavaScript, $intPriority = QJsPriority::Standard) {
 			if (is_bool($intPriority)) {
